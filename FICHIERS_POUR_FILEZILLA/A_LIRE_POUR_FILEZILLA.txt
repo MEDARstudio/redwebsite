@@ -1,0 +1,55 @@
+===================================================================
+MEDAR STUDIO - DEPLOYMENT & HOSTING GUIDE (FILEZILLA)
+===================================================================
+
+Your files are 100% prepared and optimized for your web host (cPanel, Hostinger, OVH, Apache, etc.).
+You will find all ready-to-upload files in the folder:
+👉 "FICHIERS_POUR_FILEZILLA"
+
+-------------------------------------------------------------------
+EMAIL DESTINATIONS & PRIVACY (100% SECURE):
+-------------------------------------------------------------------
+
+1. CREATIVE BRIEF / PROJECT FORM:
+   - Exclusive Destination: contact@medarstudio.com
+   - Client inquiries and project details arrive directly into your
+     official mailbox contact@medarstudio.com.
+
+2. NEWSLETTER SUBSCRIPTIONS:
+   - Exclusive Destination: medarstudio@gmail.com
+   - When a visitor subscribes, an instant alert is delivered
+     to your private Gmail: medarstudio@gmail.com.
+   - 🔒 MAXIMUM PRIVACY: No file (CSV, text or database) is ever
+     stored on your web server. Nobody can inspect the site code
+     to access subscriber lists. You alone receive notifications in your inbox.
+   - The public subscriber never sees your internal Gmail address.
+
+-------------------------------------------------------------------
+FOLDER CONTENTS (UPLOAD TO public_html ON FILEZILLA):
+-------------------------------------------------------------------
+1. assets/        -> Optimized CSS stylesheets & JavaScript bundles
+2. images/        -> All sports posters, covers, logos and graphic assets
+3. index.html     -> Main MEDAR STUDIO homepage
+4. contact.php    -> Direct processing for briefs to contact@medarstudio.com
+5. newsletter.php -> Direct processing for subscribers to medarstudio@gmail.com
+6. test-mail.php  -> 1-click diagnostic tool to test email sending on your server
+
+-------------------------------------------------------------------
+HOW TO UPLOAD VIA FILEZILLA (3 SIMPLE STEPS):
+-------------------------------------------------------------------
+Step 1:
+Open FileZilla and connect using your FTP/SFTP credentials.
+
+Step 2:
+In the RIGHT panel (Remote site):
+Navigate into your web root directory:
+👉 public_html (or htdocs / www depending on your host).
+
+Step 3:
+In the LEFT panel (Local site):
+Open "FICHIERS_POUR_FILEZILLA".
+Select ALL items (assets, images, index.html, contact.php, newsletter.php, test-mail.php)
+and drag-and-drop them into public_html.
+
+That's it! Your site is live, completely in English, and securely routed to your designated mailboxes.
+===================================================================
