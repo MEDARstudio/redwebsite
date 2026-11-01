@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO & Social Sharing Meta Tags -->
+    <meta name="description" content="Portfolio for MEDAR STUDIO in black #000000, red #E91F29 and white, with Syne typography, immersive dynamic background and custom creative brief form." />
+    <meta name="keywords" content="MEDAR STUDIO, graphic design, poster design, album cover art, sports posters, visual creation, art direction" />
+    <meta name="author" content="MEDAR STUDIO" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.medarstudio.com/" />
+    <meta property="og:title" content="MEDAR STUDIO | Graphic Design & Poster Art" />
+    <meta property="og:description" content="Portfolio for MEDAR STUDIO in black #000000, red #E91F29 and white, with Syne typography, immersive dynamic background and custom creative brief form." />
+    <meta property="og:image" content="/images/iconemedar.webp" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.medarstudio.com/" />
+    <meta property="twitter:title" content="MEDAR STUDIO | Graphic Design & Digital Solutions" />
+    <meta property="twitter:description" content="Portfolio for MEDAR STUDIO in black #000000, red #E91F29 and white, with Syne typography, sports design and digital solutions." />
+    <meta property="twitter:image" content="/images/iconemedar.webp" />
+
+    <!-- Favicon & Site Icons (500x500 Medar Studio Logo) -->
+    <link rel="icon" type="image/webp" href="/images/iconemedar.webp" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/iconemedar.webp" />
+
+    <!-- Theme Color for Browsers -->
+    <meta name="theme-color" content="#000000">
+    
+    <title>MEDAR STUDIO | Graphic Design & Poster Art</title>
+    <script>
+      // Suppress dev-time WebSocket / Vite HMR connection errors in sandboxed iframes
+      window.addEventListener('error', function(e) {
+        if (e && (e.message && e.message.includes('WebSocket') || (e.filename && e.filename.includes('@vite/client')))) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+          return true;
+        }
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        if (e && e.reason && (String(e.reason).includes('WebSocket') || String(e.reason).includes('@vite/client'))) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+        }
+      });
+    </script>
+    <style>
+      html, body {
+        background-color: #000000 !important;
+        color: #FFFFFF !important;
+        font-family: 'Syne', system-ui, -apple-system, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+    </style>
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Advanced Dynamic Background Canvas & Atmospheric Lighting -->
+    <div class="background-canvas-wrapper" aria-hidden="true">
+        <canvas id="ambient-canvas"></canvas>
+    </div>
+    <div class="ambient-glow glow-1" aria-hidden="true"></div>
+    <div class="ambient-glow glow-2" aria-hidden="true"></div>
+    <div class="ambient-glow glow-3" aria-hidden="true"></div>
+    <div class="background-grid" aria-hidden="true"></div>
+    <div class="ambient-vignette" aria-hidden="true"></div>
+
+    <div id="root">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <a href="#home" class="logo">
+                    <span class="logo-bold">MEDAR STUDIO</span><span class="logo-red-dot">.</span>
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#work">Works</a></li>
+                        <li><a href="#about">Studio</a></li>
+                        <li>
+                            <a href="#contact" class="nav-cta" id="navStartBriefBtn" role="button" aria-label="Start a Brief">
+                                <span class="nav-cta-dot" aria-hidden="true"></span>
+                                <span>Start a Brief</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <button class="mobile-nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle menu">
+                    <div class="hamburger-box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <div class="container">
+                    <div class="hero-kicker">
+                        <span class="hero-kicker-dot"></span>
+                        <span>Graphic Design & Visual Creation · 2026</span>
+                    </div>
+                    <h1>
+                        Crafting Striking Visuals & Poster Art with <span class="highlight-red">Impact</span>.
+                    </h1>
+                    <p id="heroDesc">
+                        Graphic design and visual creation studio. We create high-impact posters, album cover art, and custom visuals that stand out.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="cta-button">
+                            <span>Start a Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#work" class="cta-button-secondary">
+                            <span>Explore Works</span>
+                        </a>
+                    </div>
+
+                    <!-- Key Agency Metrics Strip -->
+                    <div class="hero-stats-strip hero-stats-3">
+                        <div class="stat-item">
+                            <span class="stat-value"><span class="stat-red">+</span>15</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">100<span class="stat-red">%</span></span>
+                            <span class="stat-label">Tailored Design</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">&lt; 24<span class="stat-red">h</span></span>
+                            <span class="stat-label">Response Time</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="services-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-kicker">Our Focus</span>
+                        <h2>Dedicated, striking, and crafted creations.</h2>
+                        <p>We focus on what we master with dedication to bring you top-tier creative visuals.</p>
+                    </div>
+                    <div class="services-grid services-grid-4">
+                        <div class="service-card">
+                            <div class="service-card-top">
+                                <span class="service-index">01</span>
+                                <span class="service-icon"><i class="fas fa-palette"></i></span>
+                            </div>
+                            <div>
+                                <h3>Sports & Event Posters (Matchday / F1 / Combat)</h3>
+                                <p>Dynamic sports posters (Football, F1, Combat sports), key match visuals, and event prints with bold emotional intensity.</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card-top">
+                                <span class="service-index">02</span>
+                                <span class="service-icon"><i class="fas fa-compact-disc"></i></span>
+                            </div>
+                            <div>
+                                <h3>Album Covers & Music Visual Direction</h3>
+                                <p>Cover artwork for singles, albums and vinyls, tracklist back cover design, streaming banners and promotional launch assets.</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card-top">
+                                <span class="service-index">03</span>
+                                <span class="service-icon"><i class="fas fa-fingerprint"></i></span>
+                            </div>
+                            <div>
+                                <h3>Visual Identity & Logo Design</h3>
+                                <p>Custom logotypes, bold typographic systems, color palettes, and distinctive graphic elements tailored to your world.</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card-top">
+                                <span class="service-index">04</span>
+                                <span class="service-icon"><i class="fas fa-wand-magic-sparkles"></i></span>
+                            </div>
+                            <div>
+                                <h3>Creative Artwork & Retouching</h3>
+                                <p>Refined digital compositions, dramatic lighting effects, rich textures, and high-definition rendering ready for print and screen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3D Carousel Section -->
+            <section id="work" class="portfolio" aria-label="Recent Works">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-kicker">Selected Works</span>
+                        <h2>Featured Studio Projects</h2>
+                        <p>Explore our recent sports design and digital solutions creations.</p>
+                    </div>
+                    <div class="carousel-3d-container" aria-roledescription="carousel">
+                        <div class="carousel-3d" id="carousel3d" tabindex="0" aria-live="polite">
+                            <div class="card active" data-id="proj-husa" style="transform: rotateY(0deg) translateZ(300px);">
+                                <img src="/images/MATCHDAY_HUSA_RAJA.webp" alt="HUSA AGADIR — Matchday Graphic">
+                            </div>
+                            <div class="card" data-id="proj-loyalis" style="transform: rotateY(60deg) translateZ(300px);">
+                                <img src="/images/launchloyalis.webp" alt="LOYALIS TRANS — Digital Solutions">
+                            </div>
+                            <div class="card" data-id="proj-husa" style="transform: rotateY(120deg) translateZ(300px);">
+                                <img src="/images/lineup.webp" alt="HUSA AGADIR — Official Lineup">
+                            </div>
+                            <div class="card" data-id="proj-husa" style="transform: rotateY(180deg) translateZ(300px);">
+                                <img src="/images/goal.webp" alt="HUSA AGADIR — Goal Highlight">
+                            </div>
+                            <div class="card" data-id="proj-husa" style="transform: rotateY(240deg) translateZ(300px);">
+                                <img src="/images/halftime.webp" alt="HUSA AGADIR — Halftime Score">
+                            </div>
+                            <div class="card" data-id="proj-husa" style="transform: rotateY(300deg) translateZ(300px);">
+                                <img src="/images/fulltime.webp" alt="HUSA AGADIR — Fulltime Result">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button id="prevBtn" aria-label="Previous work"><i class="fas fa-chevron-left"></i></button>
+                        <button id="nextBtn" aria-label="Next work"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Full Gallery (Two Projects) -->
+            <section id="full-portfolio" class="portfolio full-portfolio-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-kicker">Gallery</span>
+                        <h2>All Projects</h2>
+                        <p>Click on any artwork to view details and full project overview.</p>
+                    </div>
+                    
+                    <div class="portfolio-filters" role="tablist" aria-label="Filter">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="sport">Sport</button>
+                        <button class="filter-btn" data-filter="web">Web</button>
+                    </div>
+
+                    <div class="portfolio-grid portfolio-grid-2" id="portfolioGrid">
+                        <div class="portfolio-card" data-id="proj-husa" data-category="sport" tabindex="0" role="button" aria-label="HUSA AGADIR — Sports Design">
+                            <img class="lazy-image" 
+                                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Crect width='4' height='5' fill='%2308080a'/%3E%3C/svg%3E" 
+                                 data-src="/images/MATCHDAY_HUSA_RAJA.webp" 
+                                 alt="HUSA AGADIR — Matchday" 
+                                 loading="lazy" 
+                                 decoding="async"
+                                 width="800"
+                                 height="1000">
+                        </div>
+                        <div class="portfolio-card" data-id="proj-loyalis" data-category="web" tabindex="0" role="button" aria-label="LOYALIS TRANS — Digital Solutions">
+                            <img class="lazy-image" 
+                                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Crect width='4' height='5' fill='%2308080a'/%3E%3C/svg%3E" 
+                                 data-src="/images/launchloyalis.webp" 
+                                 alt="LOYALIS TRANS — Launch" 
+                                 loading="lazy" 
+                                 decoding="async"
+                                 width="800"
+                                 height="1000">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section id="testimonials" class="testimonials">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-kicker">Client Feedback</span>
+                        <h2>Trusted by Brands & Creators</h2>
+                    </div>
+                    <div class="testimonial-slider-container">
+                        <div class="testimonial-slider">
+                            <div class="testimonial-slide">
+                                <span class="testimonial-num">01</span>
+                                <p class="testimonial-quote">"Medar Studio understood our vision from the beginning. The creative direction was clear, the communication was smooth, and the final result gave our brand a more professional look."</p>
+                                <div class="testimonial-author">
+                                    <span class="author-name">— Business Owner</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <span class="testimonial-num">02</span>
+                                <p class="testimonial-quote">"The visuals perfectly captured the atmosphere of our place. We appreciated the creativity, attention to detail, and the fresh approach to our brand."</p>
+                                <div class="testimonial-author">
+                                    <span class="author-name">— Billiards Lounge Management</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <span class="testimonial-num">03</span>
+                                <p class="testimonial-quote">"The quality of the designs really stood out. Every visual felt carefully crafted and consistent with our club's identity. A great creative experience."</p>
+                                <div class="testimonial-author">
+                                    <span class="author-name">— Sports Organization</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <span class="testimonial-num">04</span>
+                                <p class="testimonial-quote">"I appreciated the creative approach and attention to detail. The final artwork reflected the atmosphere I wanted and gave the project a distinctive visual character."</p>
+                                <div class="testimonial-author">
+                                    <span class="author-name">— Independent Artist</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <span class="testimonial-num">05</span>
+                                <p class="testimonial-quote">"Professional, responsive, and creative. Medar Studio took the time to understand our needs and delivered visuals that matched our expectations."</p>
+                                <div class="testimonial-author">
+                                    <span class="author-name">— Local Business</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <span class="testimonial-num">06</span>
+                                <p class="testimonial-quote">"What I liked most was the ability to turn simple ideas into strong visual concepts. The collaboration was straightforward, and the results were impressive."</p>
+                                <div class="testimonial-author">
+                                    <span class="author-name">— Project Partner</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <span class="testimonial-num">07</span>
+                                <p class="testimonial-quote">"Medar Studio brought a fresh perspective to our brand. The work was well thought out, visually consistent, and delivered with great attention to detail."</p>
+                                <div class="testimonial-author">
+                                    <span class="author-name">— Brand Representative</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <span class="testimonial-num">08</span>
+                                <p class="testimonial-quote">"A smooth and enjoyable collaboration from start to finish. The creative direction, quality of execution, and overall professionalism made a real difference."</p>
+                                <div class="testimonial-author">
+                                    <span class="author-name">— Creative Collaboration</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="slider-btn prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                        
+                        <div class="testimonial-nav-bar">
+                            <div class="testimonial-dots" id="testimonialDots"></div>
+                            <span class="testimonial-counter" id="testimonialCounter">01 / 08</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about">
+                <div class="container about-container">
+                    <div class="about-content">
+                        <div class="section-header">
+                            <span class="section-kicker">The Studio</span>
+                            <h2>Creative thinking. Meaningful impact.</h2>
+                        </div>
+                        <div class="about-manifesto">
+                            <p class="about-lead">
+                                <strong>MEDAR STUDIO is an independent creative studio driven by ideas, visual expression, and a passion for shaping distinctive digital experiences.</strong>
+                            </p>
+                            <p class="about-narrative">
+                                Built on curiosity, creativity, and a constant pursuit of quality, Medar Studio believes that every project deserves a thoughtful approach and a clear creative vision.
+                            </p>
+                            <div class="about-quote">
+                                <p>« Creativity is not just about what you create, but the impact it leaves behind. »</p>
+                            </div>
+                            <p class="about-narrative">
+                                We approach every collaboration with an open mind, attention to detail, and the ambition to create work that stands out, communicates with purpose, and leaves a lasting impression.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CREATIVE BRIEFING FORM -->
+            <section id="contact" class="contact">
+                <div class="container contact-container">
+                    <!-- Brief Sign / Studio Teaser Card -->
+                    <div class="brief-teaser-card" id="briefTeaserCard">
+                        <div class="brief-status-pill">
+                            <span class="brief-status-dot"></span>
+                            <span>Studio · Brief Open 2026</span>
+                        </div>
+                        <h2 class="brief-teaser-title">Ready to bring your creative vision to life?</h2>
+                        <p class="brief-teaser-desc">
+                            Sports posters, album covers, or brand identity: our custom creative brief form is accessible with a single click. We review every project personally with a response within 24h.
+                        </p>
+                        <div class="brief-teaser-actions">
+                            <button type="button" class="open-brief-btn" id="openBriefBtn">
+                                <span>Start Creative Brief</span>
+                                <i class="fas fa-pen-nib"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Form Container (Shown on button click) -->
+                    <div class="brief-form-wrapper" id="briefFormWrapper">
+                        <div class="close-brief-bar">
+                            <button type="button" class="close-brief-btn" id="closeBriefBtn" aria-label="Hide form">
+                                <i class="fas fa-chevron-up"></i>
+                                <span>Hide form</span>
+                            </button>
+                        </div>
+
+                        <div class="contact-container-inner">
+                            <div class="contact-info">
+                                <span class="section-kicker">Dedicated Creative Brief</span>
+                                <h2>Share your project</h2>
+                                <p>Define your needs and timeline. Direct private delivery with a response within 24 hours.</p>
+                            </div>
+
+                            <!-- Direct Form submission -->
+                            <form id="agencyBriefForm" action="contact.php" method="POST" class="brief-form" novalidate>
+                                <!-- Form Configuration -->
+                                <input type="hidden" name="_subject" value="New Project Brief - MEDAR STUDIO">
+                                <input type="hidden" name="_template" value="box">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="recipient_email" value="contact@medarstudio.com">
+
+                                <!-- Dynamic form fields -->
+                                <input type="hidden" name="selected_services" id="hiddenServices" value="Match & Sports Posters">
+                                <input type="hidden" name="project_scope" id="hiddenScope" value="Standard Project">
+                                <input type="hidden" name="timeline" id="hiddenTimeline" value="1 week">
+
+                                <!-- Step 1: Services Selection -->
+                                <div class="brief-step-group">
+                                    <div class="step-label">
+                                        <span class="step-number">01</span>
+                                        <span class="step-title">What type of creation are you looking for?</span>
+                                        <span class="step-subtitle">Select one or multiple options</span>
+                                    </div>
+                                    <div class="services-choice-grid">
+                                        <div class="service-choice-item selected" data-service="Match & Sports Posters">
+                                            <div class="service-choice-check"><i class="fas fa-check"></i></div>
+                                            <div class="service-choice-name">Sports Posters & Matchday</div>
+                                        </div>
+                                        <div class="service-choice-item" data-service="Album Cover Art">
+                                            <div class="service-choice-check"><i class="fas fa-check"></i></div>
+                                            <div class="service-choice-name">Album Covers & Singles</div>
+                                        </div>
+                                        <div class="service-choice-item" data-service="Visual Identity & Logo">
+                                            <div class="service-choice-check"><i class="fas fa-check"></i></div>
+                                            <div class="service-choice-name">Visual Identity & Logotype</div>
+                                        </div>
+                                        <div class="service-choice-item" data-service="Creative Compositing & Retouch">
+                                            <div class="service-choice-check"><i class="fas fa-check"></i></div>
+                                            <div class="service-choice-name">Retouching & Creative Compositing</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 2: Project Scope / Scale -->
+                                <div class="brief-step-group">
+                                    <div class="step-label">
+                                        <span class="step-number">02</span>
+                                        <span class="step-title">Project Scale</span>
+                                        <span class="step-subtitle">No financial commitment</span>
+                                    </div>
+                                    <div class="pills-selector-row" id="scopeRow">
+                                        <div class="pill-option" data-value="Single Visual / Poster">Single Visual / Poster</div>
+                                        <div class="pill-option selected" data-value="Standard Project">Standard Project</div>
+                                        <div class="pill-option" data-value="Full Campaign / Package">Full Campaign / Package</div>
+                                        <div class="pill-option" data-value="Open to Discussion">Open to Discussion</div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 3: Timeline Expectations -->
+                                <div class="brief-step-group">
+                                    <div class="step-label">
+                                        <span class="step-number">03</span>
+                                        <span class="step-title">Desired Timeline</span>
+                                    </div>
+                                    <div class="pills-selector-row" id="timelineRow">
+                                        <div class="pill-option" data-value="Under 48 hours (Rush)">Under 48 hours (Rush)</div>
+                                        <div class="pill-option selected" data-value="1 week">1 week</div>
+                                        <div class="pill-option" data-value="2 to 3 weeks">2 to 3 weeks</div>
+                                        <div class="pill-option" data-value="Flexible">Flexible</div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 4: Contact & Project Details -->
+                                <div class="brief-step-group">
+                                    <div class="step-label">
+                                        <span class="step-number">04</span>
+                                        <span class="step-title">Your Details & Project Overview</span>
+                                    </div>
+
+                                    <div class="form-grid-2">
+                                        <div class="form-group">
+                                            <label for="clientName">Your Name / Handle <span class="required-mark">*</span></label>
+                                            <input type="text" id="clientName" name="name" placeholder="e.g. Alex, Jordan..." required autocomplete="name">
+                                            <span class="error-message"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="clientEmail">Your Email Address <span class="required-mark">*</span></label>
+                                            <input type="email" id="clientEmail" name="email" placeholder="your-email@domain.com" required autocomplete="email">
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-grid-2">
+                                        <div class="form-group">
+                                            <label for="companyName">Project / Artist / Club Name (Optional)</label>
+                                            <input type="text" id="companyName" name="company" placeholder="e.g. Club, band or brand name...">
+                                            <span class="error-message"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="clientPhone">Phone / WhatsApp (Optional)</label>
+                                            <input type="tel" id="clientPhone" name="phone" placeholder="e.g. +1... or +44...">
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="margin-bottom: 1.25rem;">
+                                        <label for="projectBrief">Describe your project & expectations <span class="required-mark">*</span></label>
+                                        <textarea id="projectBrief" name="message" rows="4" placeholder="What would you like to create? Specify the style, atmosphere, key players or artists, and any specific requirements..." required></textarea>
+                                        <span class="error-message"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="referenceLink">Reference Link or Moodboard (Optional)</label>
+                                        <input type="url" id="referenceLink" name="reference_link" placeholder="Pinterest, Behance, Google Drive or reference link...">
+                                        <span class="error-message"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-submit-container">
+                                    <button type="submit" class="submit-brief-btn" id="submitBriefBtn">
+                                        <span>Send Creative Brief</span>
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                    <div class="form-security-note">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>Direct confidential submission. Guaranteed response within 24 hours.</span>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Success Confirmation View -->
+                            <div class="brief-success-modal" id="briefSuccessModal">
+                                <div class="success-icon-wrap">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <h3>Brief submitted successfully!</h3>
+                                <p>Thank you for reaching out. We have received your creative brief and will review your project details with a response within 24 hours.</p>
+                                
+                                <div class="brief-recap-box" id="briefRecapContent">
+                                    <!-- Populated dynamically -->
+                                </div>
+
+                                <div class="success-actions">
+                                    <button type="button" class="cta-button" id="resetBriefBtn">
+                                        <span>Submit Another Brief</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Subscription Section -->
+            <section id="newsletter" class="newsletter-section">
+                <div class="container newsletter-container">
+                    <div class="newsletter-inner">
+                        <div class="newsletter-badge">
+                            <span class="newsletter-badge-dot"></span>
+                            <span>Stay Connected · Newsletter</span>
+                        </div>
+                        <h2>Join the Inner Circle</h2>
+                        <p>Receive exclusive early previews of new sports posters, brand identities, and digital product launches directly to your inbox.</p>
+                        
+                        <form id="newsletterForm" class="newsletter-form" novalidate>
+                            <div class="newsletter-input-group">
+                                <i class="fas fa-envelope newsletter-input-icon"></i>
+                                <input type="email" id="newsletterEmail" placeholder="your-email@domain.com" required autocomplete="email" />
+                                <button type="submit" class="newsletter-submit-btn" id="newsletterSubmitBtn">
+                                    <span>Subscribe</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                            <div class="newsletter-feedback" id="newsletterFeedback"></div>
+                        </form>
+                        <p class="newsletter-disclaimer">Zero spam. Only high-impact creative updates. Unsubscribe anytime.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="footer-title">Let's create something striking together.</h2>
+                <div class="footer-email-wrap">
+                    <a href="mailto:contact@medarstudio.com" class="footer-email-capsule" title="Send email to contact@medarstudio.com">
+                        <span class="capsule-dot" aria-hidden="true"></span>
+                        <span class="capsule-email">contact@medarstudio.com</span>
+                        <span class="capsule-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/medar.studio/" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" /></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@medar.studio?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="TikTok">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.3-.002.59.04.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.88-4.48V8.71a8.3 8.3 0 0 0 3.89 1z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/medar-studio/home/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+                    </a>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2026 <span class="studio-name">MEDAR STUDIO<span class="red-dot">.</span></span> All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+
+        <!-- High-End Editorial Studio Project Viewer -->
+        <div id="projectViewer" class="project-viewer" role="dialog" aria-modal="true" aria-hidden="true">
+            <div class="project-viewer-backdrop" id="projectViewerBackdrop"></div>
+            
+            <div class="project-viewer-container">
+                <!-- Studio Header Bar -->
+                <header class="pv-topbar">
+                    <div class="pv-topbar-left">
+                        <span class="pv-brand">
+                            <span class="pv-brand-dot"></span>
+                            MEDAR STUDIO
+                        </span>
+                        <span class="pv-divider">/</span>
+                        <span class="pv-kicker" id="pvProjectCategory">Sports Art Direction</span>
+                    </div>
+
+                    <div class="pv-topbar-center">
+                        <span class="pv-project-counter" id="pvGlobalCounter">PROJECT 01 / 02</span>
+                    </div>
+
+                    <div class="pv-topbar-right">
+                        <div class="pv-nav-controls">
+                            <button type="button" class="pv-switch-btn" id="pvPrevProjectBtn" title="Previous project">
+                                <i class="fas fa-arrow-left"></i>
+                                <span class="pv-switch-label">Previous</span>
+                            </button>
+                            <span class="pv-nav-separator">|</span>
+                            <button type="button" class="pv-switch-btn" id="pvNextProjectBtn" title="Next project">
+                                <span class="pv-switch-label">Next</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <button type="button" class="pv-close-btn" id="pvCloseBtn" aria-label="Close project view">
+                            <span class="pv-close-text">CLOSE</span>
+                            <span class="pv-close-icon"><i class="fas fa-times"></i></span>
+                            <kbd class="pv-kbd">ESC</kbd>
+                        </button>
+                    </div>
+                </header>
+
+                <!-- Case Study Split Canvas -->
+                <div class="pv-main-content">
+                    <!-- Left: Immersive Visual Stage -->
+                    <div class="pv-stage-column">
+                        <div class="pv-stage-viewport" id="viewerMainWrapper">
+                            <div class="pv-stage-loader" id="viewerLoader" aria-hidden="true">
+                                <div class="pv-loader-ring"></div>
+                                <span class="pv-loader-text">Loading visual...</span>
+                            </div>
+
+                            <!-- Interactive Slide Navigation Arrows -->
+                            <button type="button" class="pv-slide-arrow prev" id="viewerPrevBtn" aria-label="Previous image">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+
+                            <div class="pv-image-frame" id="pvImageFrame">
+                                <img class="pv-primary-image" id="viewerMainImage" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Crect width='4' height='5' fill='%23050507'/%3E%3C/svg%3E" alt="Project visual" />
+                            </div>
+
+                            <button type="button" class="pv-slide-arrow next" id="viewerNextBtn" aria-label="Next image">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+
+                            <!-- Slide HUD: Counter, Caption & Expand Action -->
+                            <div class="pv-viewport-hud">
+                                <div class="pv-slide-counter">
+                                    <span class="pv-dot-indicator"></span>
+                                    <span id="viewerCounter">1 / 5</span>
+                                    <span class="pv-hud-separator">·</span>
+                                    <span id="viewerCaption" class="pv-hud-caption">Official Poster</span>
+                                </div>
+                                <div class="pv-viewport-actions">
+                                    <button type="button" class="pv-hud-btn" id="pvZoomToggleBtn" title="Fullscreen / Zoom">
+                                        <i class="fas fa-expand-alt" id="pvZoomIcon"></i>
+                                        <span class="pv-hud-btn-text" id="pvZoomText">Fullscreen</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Filmstrip / Visual Scrubber -->
+                        <div class="pv-filmstrip-bar" id="pvFilmstripBar">
+                            <div class="pv-filmstrip-header">
+                                <span class="pv-filmstrip-title">VISUAL SEQUENCE (<span id="pvStepCount">5</span>)</span>
+                                <span class="pv-filmstrip-hint"><i class="fas fa-hand-pointer"></i> Click to preview</span>
+                            </div>
+                            <div class="pv-thumbs-track" id="viewerThumbsTrack" aria-label="Project thumbnails"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Curated Studio Narrative & Specs -->
+                    <div class="pv-narrative-column">
+                        <div class="pv-narrative-inner">
+                            <div class="pv-project-badge-row">
+                                <span class="pv-badge-pill" id="pvDisciplineTag">Sport &amp; Entertainment</span>
+                                <span class="pv-badge-year" id="pvProjectYear">2025</span>
+                            </div>
+
+                            <h1 class="pv-project-title" id="pvProjectTitle">HUSA AGADIR</h1>
+
+                            <p class="pv-project-lead" id="pvProjectLead">Art direction and visual design for official Botola Pro football clashes.</p>
+
+                            <!-- Studio Metadata Table -->
+                            <div class="pv-specs-table">
+                                <div class="pv-spec-item">
+                                    <span class="pv-spec-label">CLIENT</span>
+                                    <span class="pv-spec-value" id="pvClientValue">Hassania Union Sport Agadir</span>
+                                </div>
+                                <div class="pv-spec-item">
+                                    <span class="pv-spec-label">DISCIPLINE</span>
+                                    <span class="pv-spec-value" id="pvCategoryValue">Visual Direction &amp; Social Graphics</span>
+                                </div>
+                                <div class="pv-spec-item">
+                                    <span class="pv-spec-label">DELIVERABLES</span>
+                                    <span class="pv-spec-value" id="pvDeliverablesValue">Matchday, Lineup, Highlights, Halftime, Fulltime</span>
+                                </div>
+                                <div class="pv-spec-item">
+                                    <span class="pv-spec-label">IMPACT</span>
+                                    <span class="pv-spec-value" id="pvImpactValue">+140% digital engagement across social channels</span>
+                                </div>
+                            </div>
+
+                            <!-- Editorial Brief & Approach -->
+                            <div class="pv-editorial-section">
+                                <h3 class="pv-section-title">
+                                    <span class="pv-section-icon"><i class="fas fa-layer-group"></i></span>
+                                    THE BRIEF &amp; APPROACH
+                                </h3>
+                                <div class="pv-brief-text" id="pvProjectBrief"></div>
+                            </div>
+
+                            <!-- Process Breakdown Steps -->
+                            <div class="pv-process-section" id="pvProcessSection">
+                                <h3 class="pv-section-title">
+                                    <span class="pv-section-icon"><i class="fas fa-compass"></i></span>
+                                    COMPOSITION &amp; DELIVERABLES
+                                </h3>
+                                <div class="pv-process-steps-list" id="pvProcessStepsList"></div>
+                            </div>
+
+                            <!-- Studio Conversion Call To Action -->
+                            <div class="pv-cta-box">
+                                <div class="pv-cta-text">
+                                    <h4>Have a similar project?</h4>
+                                    <p>Let's collaborate to build striking, custom visuals tailored for your brand.</p>
+                                </div>
+                                <div class="pv-cta-actions">
+                                    <button type="button" class="pv-cta-primary-btn" id="pvLaunchBriefBtn">
+                                        <span>Start a similar brief</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                    <button type="button" class="pv-share-btn" id="pvShareBtn" title="Share project link">
+                                        <i class="fas fa-link"></i>
+                                        <span id="pvShareLabel">Share</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Project Switcher Bar -->
+                <footer class="pv-bottom-bar">
+                    <button type="button" class="pv-prev-card" id="pvBottomPrevBtn">
+                        <div class="pv-btn-arrow"><i class="fas fa-chevron-left"></i></div>
+                        <div class="pv-btn-content">
+                            <span class="pv-btn-kicker">PREVIOUS PROJECT</span>
+                            <span class="pv-btn-title" id="pvBottomPrevTitle">LOYALIS TRANS</span>
+                        </div>
+                    </button>
+
+                    <div class="pv-bottom-indicator" id="pvBottomIndicator">
+                        <span class="pv-indicator-circle active"></span>
+                        <span class="pv-indicator-circle"></span>
+                    </div>
+
+                    <button type="button" class="pv-next-card" id="pvBottomNextBtn">
+                        <div class="pv-btn-content text-right">
+                            <span class="pv-btn-kicker">NEXT PROJECT</span>
+                            <span class="pv-btn-title" id="pvBottomNextTitle">LOYALIS TRANS</span>
+                        </div>
+                        <div class="pv-btn-arrow"><i class="fas fa-chevron-right"></i></div>
+                    </button>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="/index.js"></script>
+  </body>
+</html>
